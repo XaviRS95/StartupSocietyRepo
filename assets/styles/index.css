@@ -2,6 +2,7 @@
 @import "header.css";
 @import "contact.css";
 @import "events.css";
+@import "about.css";
 
 html{
     scroll-behavior: smooth;
@@ -58,11 +59,12 @@ p{
     color: #424242;
 }
 
+
+
 #whowearediv p{
     max-width: 1050px;
     font-family: 'Lato';
     font-weight: 400;
-    margin: 5px 0px 0px 0px;
     font-size: 20px;
 }
 /**/
@@ -95,7 +97,7 @@ p{
 }
 
 
-.contenedor{
+.container{
     width: 1100px;
     height: auto;
     display: flex;
@@ -105,16 +107,6 @@ p{
     padding: 15px;
     margin: 15px;
 }
-
-
-contenedor:first-child{
-    margin-top: 0;
-}
-
-contenedor:last-child{
-    margin-bottom: 0;
-}
-
 
 /*Media Queries*/
 
@@ -157,22 +149,10 @@ contenedor:last-child{
     #whowearediv p{
         font-size: calc(0.9vh + 0.9vw);
     }
-
     .section_title{
         font-size: calc(1vh + 1vw);
     }
-    .project-description{
-        font-size: calc(0.7vh + 0.7vw);
-    }
-
-    .slidediv img{
-        max-height: 50vh;
-    }
-
-    .grid_container{
-        column-count: 2;
-    }
-    .contenedor{
+    .container{
         width: 100%;
     }
     .introduction_div{
@@ -188,20 +168,6 @@ contenedor:last-child{
         margin-left: 15px;
         margin-right: 15px;
     }
-
-    .project .title{
-        font-size: calc(1.1vh + 1.1vw);
-        margin-top: 0.5vh ;
-    }
-    .project-description{
-        font-size: calc(1vh + 1vw);
-    }
-    .facility-title{
-        font-size: calc(1.1vh + 1.1vw);
-    }
-    .facility-description{
-        font-size: calc(1vh + 1vw);
-    }
     .event_title{
         font-size: calc(1.1vh + 1.1vw);
     }
@@ -211,14 +177,6 @@ contenedor:last-child{
     .event_description{
         font-size: calc(1vh + 1vw);
     }
-    .workshop img{
-        width: 125px;
-        height: 125px;
-    }
-    .workshop-title{
-        font-size: calc(1vh + 1vw);
-    }
-
     .contact_element{
         font-size: calc(0.9vh + 0.9vw);
     }
@@ -230,9 +188,6 @@ contenedor:last-child{
     .event{
         width: 100%;
     }
-    .workshops{
-        grid-template-columns: repeat(2, [col-start] 1fr);
-    }
 
 }
 
@@ -240,11 +195,13 @@ contenedor:last-child{
     .grid_container{
         column-count: 1;
     }
-    .contenedor{
+    .container{
         width: 100%;
     }
     .social_media{
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
         margin-left: 0px;
         margin-right: 0px;
     }
@@ -259,10 +216,6 @@ contenedor:last-child{
         height: calc(3vh + 3vw);
         width: calc(10vh + 5vw);
     }
-    #scrollup_button{
-        height: 60px;
-        width: 60px;
-    }
     .headeroptions{
         top: calc(4vh + 4vw);
     }
@@ -274,19 +227,6 @@ contenedor:last-child{
     .section_title{
         font-size: calc(1.7vh + 1.7vw);
     }
-    .project .title{
-        font-size: calc(1.6vh + 1.6vw);
-        margin-top: 0.5vh ;
-    }
-    .project-description{
-        font-size: calc(1.5vh + 1.5vw);
-    }
-    .facility-title{
-        font-size: calc(1.7vh + 1.7vw);
-    }
-    .facility-description{
-        font-size: calc(1.5vh + 1.5vw);
-    }
     .event_title{
         font-size: calc(1.7vh + 1.7vw);
     }
@@ -296,26 +236,11 @@ contenedor:last-child{
     .event_description{
         font-size: calc(1.5vh + 1.5vw);
     }
-    .slidediv img{
-        max-height: 40vh;
-    }
-    .workshops{
-        grid-template-columns: repeat(1, [col-start] 1fr);
-    }
-    .workshop img{
-        width: 125px;
-        height: 125px;
-    }
-    .workshop-title{
-        font-size: calc(1.4vh + 1.4vw);
-    }
-
     .contact_element{
         font-size: calc(1.4vh + 1.4vw);
     }
-    .contact_div{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+    .social_media{
+        display: grid;
+        grid-template-columns: repeat(2, [col-start] 1fr);
     }
 }
